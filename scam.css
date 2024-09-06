@@ -1,0 +1,77 @@
+.pic img {
+	width:100%;
+}
+.basic {
+    width:100%;
+    background-color: #202020;
+    color: white;
+    margin: 20px;
+}
+
+.navbar.option1 {
+    display: flex;
+    justify-content: space-around; /* Adjust to control spacing between the links */
+    align-items: center; /* Vertically align the items if needed */
+}
+
+.link-container a {
+    margin: 35px;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.link-container a:hover {
+    background-color: red;       /* Change background color to red on hover */
+    border-color: red;           /* Change border color to red on hover */
+    color: white;                /* Text color remains white */
+}
+
+a:link {
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .option1 {
+    color: #bf1924;
+    padding: 20px;
+  }
+
+  .option2 {
+    color: #bf1924;
+  }
+
+  .option3 {
+    color: #bf1924;
+  }
+
+  .navbar {
+    margin: 100px;
+  }
+
+  .center {
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+  }
+
+  .img-cont {
+    margin-top: 20px; /* Optional: Add margin if needed */
+    display: block;
+    height: 10vh; /* Keeps the size as specified */
+}

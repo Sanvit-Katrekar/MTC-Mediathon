@@ -1,0 +1,590 @@
+body, html {
+    margin: 0; /* Removes default margin from body and html */
+    padding: 0; /* Removes default padding from body and html */
+    font-family: Arial, sans-serif; /* Sets the default font family for the text */
+    background-color: #202020; /* Sets the background color to dark grey */
+    color: white; /* Sets the default text color to white */
+}
+
+header {
+    background-color: #363636; /* Sets the background color of the header to a darker grey */
+    padding: 20px; /* Adds padding around the header */
+    color: white; /* Sets the text color inside the header to white */
+    position: fixed; /* Fixes the header at the top of the page */
+    width: 100%; /* Makes the header span the full width of the page */
+    top: 0; /* Positions the header at the top of the page */
+    left: 0; /* Aligns the header to the left */
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow below the header for depth */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+}
+
+.navbar {
+    display: flex; /* Uses Flexbox to align navbar items */
+    justify-content: space-between; /* Distributes space between logo and nav links */
+    align-items: center; /* Vertically centers the items */
+    margin: 0; /* Removes default margin */
+}
+
+.nav-links {
+    list-style-type: none; /* Removes bullet points from the list */
+    display: flex; /* Uses Flexbox to arrange list items in a row */
+    gap: 20px; /* Adds space between the nav links */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+.nav-links li {
+    display: inline; /* Displays list items inline */
+}
+
+.nav-links a {
+    color: white; /* Sets the text color of nav links to white */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Makes the text bold */
+    transition: color 0.3s ease; /* Smooth transition effect for hover */
+}
+
+.nav-links a:hover {
+    color: #f0a500; /* Changes link color on hover to a yellowish tone */
+}
+
+.menu-icon {
+    display: none; /* Hides the menu icon, can be used for mobile view */
+}
+
+.hero {
+    display: flex; /* Uses Flexbox to align hero elements */
+    align-items: center; /* Vertically centers content within the hero section */
+    justify-content: center; /* Horizontally centers content within the hero section */
+    height: calc(100vh - 100px); /* Sets hero height to full viewport height minus navbar height */
+    background-color: #202020; /* Sets the hero background color to dark grey */
+    color: white; /* Sets the text color to white */
+    padding: 0 80px; /* Adds horizontal padding around the hero section */
+}
+
+.hero-image {
+    flex: 1; /* Allows the image section to grow and fill space */
+    max-width: 50%; /* Limits the width of the hero image section to 50% */
+}
+
+.hero-image img {
+    width: 75%; /* Sets the image width to 100% of its container */
+    height: auto; /* Adjusts the height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the image */
+    object-fit: cover; /* Scales the image to cover its container */
+    padding-top: 100px; /* Adds padding above the image */
+}
+
+.hero-content {
+    flex: 1; /* Allows the text section to grow and fill space */
+    max-width: 50%; /* Limits the width of the hero text section to 50% */
+    text-align: left; /* Aligns text to the left */
+    padding-left: 40px; /* Adds space between the hero image and text */
+}
+
+.hero h1 {
+    font-size: 60px; /* Sets a large font size for the hero heading */
+    line-height: 1.2; /* Sets line height to 1.2 times the font size */
+    margin: 0; /* Removes default margin */
+}
+
+.hero p {
+    font-size: 16px; /* Sets font size for hero paragraph text */
+    margin: 20px 0; /* Adds vertical space above and below paragraph */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+}
+
+.hero-buttons {
+    margin-top: 20px; /* Adds space above the hero buttons */
+}
+
+.btn, .btn-video {
+    display: inline-block; /* Displays buttons inline, but as blocks */
+    padding: 10px 20px; /* Adds padding inside the buttons */
+    margin-right: 10px; /* Adds space to the right of each button */
+    background-color: white; /* Sets button background color to white */
+    color: black; /* Sets button text color to black */
+    text-decoration: none; /* Removes underline from text links */
+    font-weight: bold; /* Makes button text bold */
+    border-radius: 5px; /* Rounds the corners of the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn:hover {
+    background-color: black; /* Changes button background color to black on hover */
+    color: white; /* Changes button text color to white on hover */
+}
+
+.btn-video {
+    background-color: transparent; /* Sets video button background to transparent */
+    color: white; /* Sets video button text color to white */
+    border: 1px solid white; /* Adds a white border around the video button */
+}
+
+.btn-video:hover {
+    background-color: #f0a500; /* Changes background color of video button on hover */
+    color: black; /* Changes text color of video button on hover */
+}
+
+.introduction {
+    padding: 50px 80px; /* Adds padding to top/bottom and increases padding on sides */
+    background-color: #202020; /* Sets background color to dark grey */
+    color: white; /* Sets text color to white */
+}
+
+.intro-content {
+    display: flex; /* Uses Flexbox to align introduction content */
+    justify-content: space-between; /* Distributes space between content */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Adds space between text and image */
+}
+
+.intro-left {
+    flex: 2; /* Takes up more space than the intro-right section */
+    padding-right: 20px; /* Adds space between text and image */
+}
+
+.intro-left h2 {
+    font-size: 50px; /* Sets a large font size for the heading */
+    margin-bottom: 10px; /* Adds space below the heading */
+    position: relative; /* Positions the heading for adding underline */
+}
+
+.intro-left h2::after {
+    content: ''; /* Creates an empty content for the underline */
+    display: block; /* Makes it a block element */
+    width: 60px; /* Sets the width of the underline */
+    height: 3px; /* Sets the height of the underline */
+    background-color: white; /* Sets underline color to white */
+    margin-top: 10px; /* Adds space above the underline */
+}
+
+.intro-left p {
+    font-size: 16px; /* Sets font size for paragraph text */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+    margin-bottom: 20px; /* Adds space between paragraphs */
+}
+
+.intro-sub-sections {
+    display: flex; /* Uses Flexbox to align sub-sections */
+    justify-content: space-between; /* Distributes space between sub-sections */
+    gap: 20px; /* Adds space between sub-sections */
+}
+
+.intro-sub-section {
+    flex: 1; /* Allows each sub-section to take equal space */
+    padding: 20px; /* Adds padding within sub-sections */
+    background-color: #2a2a2a; /* Sets a slightly different background for sub-sections */
+    border-radius: 5px; /* Rounds the corners of sub-sections */
+}
+
+.intro-sub-section h3 {
+    font-size: 30px; /* Sets font size for sub-section headings */
+    margin-bottom: 10px; /* Adds space below the sub-section heading */
+}
+
+.intro-sub-section p {
+    font-size: 14px; /* Sets font size for sub-section paragraphs */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+}
+
+.intro-image {
+    flex: 1; /* Takes less space compared to the intro-left section */
+    max-width: 40%; /* Limits the maximum width of the image */
+    padding-left: 20px; /* Adds space between text and image */
+    padding-top: 80px; /* Adds space above the image */
+}
+
+.intro-image img {
+    width: 100%; /* Sets the image width to fill its container */
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the image */
+    border: 3px solid #333; /* Adds a border around the image */
+}
+
+.about-me {
+    padding: 50px 80px; /* Adds padding to top/bottom and sides */
+    background-color: #202020; /* Sets background color to dark grey */
+    color: white; /* Sets text color to white */
+}
+
+.about-images {
+    display: flex; /* Uses Flexbox to align images */
+    justify-content: space-between; /* Distributes space between images */
+    margin-bottom: 40px; /* Adds space between images and text content */
+}
+
+.about-image {
+    flex: 1; /* Allows each image to take equal space */
+    margin: 0 10px; /* Adds space between images */
+}
+
+.about-image img {
+    width: 100%; /* Sets the image width to fill its container */
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the images */
+    object-fit: cover; /* Ensures images cover their container */
+}
+
+.about-content {
+    text-align: center; /* Centers the text */
+}
+
+.about-content h2 {
+    font-size: 55px; /* Sets font size for the about heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    position: relative; /* Positions the heading for adding underline */
+}
+
+.about-content h2::after {
+    content: ''; /* Creates an empty content for the underline */
+    display: block; /* Makes it a block element */
+    width: 60px; /* Sets the width of the underline */
+    height: 3px; /* Sets the height of the underline */
+    background-color: white; /* Sets underline color to white */
+    margin: 10px auto; /* Centers the underline */
+}
+
+.about-sub-sections {
+    display: flex; /* Uses Flexbox to align sub-sections */
+    justify-content: center; /* Centers sub-sections */
+    gap: 50px; /* Adds space between sub-sections */
+}
+
+.about-sub-section {
+    flex: 1; /* Allows each sub-section to take equal space */
+    max-width: 300px; /* Limits the maximum width of sub-sections */
+    text-align: left; /* Aligns text to the left */
+}
+
+.about-sub-section h3 {
+    font-size: 30px; /* Sets font size for sub-section headings */
+    margin-bottom: 10px; /* Adds space below the sub-section heading */
+}
+
+.about-sub-section p {
+    font-size: 14px; /* Sets font size for sub-section paragraphs */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+}
+
+.my-vision {
+    background-color: #202020; /* Sets background color to dark grey */
+    color: white; /* Sets text color to white */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.vision-content {
+    display: flex; /* Uses Flexbox to align vision content */
+    justify-content: space-between; /* Distributes space between content */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Adds space between images and text content */
+}
+
+.vision-images {
+    display: flex; /* Uses Flexbox to align images */
+    gap: 20px; /* Adds space between the two images */
+    flex: 1; /* Allows images container to take equal space */
+    max-width: 50%; /* Limits the width of the images container to half the section */
+}
+
+.vision-image {
+    flex: 1; /* Allows each image to take equal space */
+}
+
+.vision-image img {
+    width: 100%; /* Sets the image width to fill its container */
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of images */
+    object-fit: cover; /* Ensures images cover their container */
+    padding-top: 50px; /* Adds space above the image */
+}
+
+.vision-text {
+    flex: 1; /* Allows the text section to take equal space */
+    padding-left: 20px; /* Adds space between images and text */
+}
+
+.vision-text h2 {
+    font-size: 36px; /* Sets font size for the vision heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    position: relative; /* Positions the heading for adding underline */
+}
+
+.vision-text h2::after {
+    content: ''; /* Creates an empty content for the underline */
+    display: block; /* Makes it a block element */
+    width: 60px; /* Sets the width of the underline */
+    height: 3px; /* Sets the height of the underline */
+    background-color: white; /* Sets underline color to white */
+    margin-top: 10px; /* Adds space above the underline */
+}
+
+.vision-item {
+    display: flex; /* Uses Flexbox to align vision items */
+    align-items: flex-start; /* Aligns items to the top */
+    margin-bottom: 20px; /* Adds space between vision items */
+}
+
+.vision-number {
+    font-size: 24px; /* Sets font size for vision numbers */
+    font-weight: bold; /* Makes vision numbers bold */
+    margin-right: 10px; /* Adds space between number and text */
+}
+
+.vision-item p {
+    font-size: 14px; /* Sets font size for vision item text */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+}
+
+.my-mission {
+    padding: 50px 80px; /* Adds padding to top/bottom and sides */
+    background-color: #202020; /* Sets background color to dark grey */
+    color: white; /* Sets text color to white */
+}
+
+.mission-content {
+    display: flex; /* Uses Flexbox to align mission content */
+    justify-content: space-between; /* Distributes space between content */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Adds space between text and image grid */
+}
+
+.mission-text {
+    flex: 1; /* Allows the text section to take equal space */
+    padding-right: 20px; /* Adds space between text and image grid */
+}
+
+.mission-text h2 {
+    font-size: 36px; /* Sets font size for the mission heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    position: relative; /* Positions the heading for adding underline */
+}
+
+.mission-text h2::after {
+    content: ''; /* Creates an empty content for the underline */
+    display: block; /* Makes it a block element */
+    width: 60px; /* Sets the width of the underline */
+    height: 3px; /* Sets the height of the underline */
+    background-color: white; /* Sets underline color to white */
+    margin-top: 10px; /* Adds space above the underline */
+}
+
+.mission-item {
+    display: flex; /* Uses Flexbox to align mission items */
+    align-items: flex-start; /* Aligns items to the top */
+    margin-bottom: 20px; /* Adds space between mission items */
+}
+
+.mission-number {
+    font-size: 24px; /* Sets font size for mission numbers */
+    font-weight: bold; /* Makes mission numbers bold */
+    margin-right: 10px; /* Adds space between number and text */
+}
+
+.mission-item p {
+    font-size: 14px; /* Sets font size for mission item text */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+}
+
+.mission-images {
+    flex: 1; /* Allows image grid to take equal space */
+    display: grid; /* Uses CSS grid layout for images */
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+    gap: 20px; /* Adds space between images */
+}
+
+.mission-image div {
+    overflow: hidden; /* Ensures the image fits within its container */
+}
+
+.mission-image img {
+    width: 100%; /* Sets the image width to fill its container */
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of images */
+    object-fit: cover; /* Ensures images cover their container */
+}
+
+.technical-skills {
+    padding: 50px 80px; /* Adds padding to top/bottom and sides */
+    background-color: #202020; /* Sets background color to dark grey */
+    color: white; /* Sets text color to white */
+    text-align: center; /* Centers the heading */
+}
+
+.technical-skills h2 {
+    font-size: 36px; /* Sets font size for the skills heading */
+    margin-bottom: 40px; /* Adds space below the heading */
+    position: relative; /* Positions the heading for adding underline */
+}
+
+.technical-skills h2::after {
+    content: ''; /* Creates an empty content for the underline */
+    display: block; /* Makes it a block element */
+    width: 60px; /* Sets the width of the underline */
+    height: 3px; /* Sets the height of the underline */
+    background-color: white; /* Sets underline color to white */
+    margin: 10px auto; /* Centers the underline */
+}
+
+.skills-content {
+    display: flex; /* Uses Flexbox to align skill items */
+    justify-content: space-around; /* Distributes space around skill items */
+    flex-wrap: nowrap; /* Prevents wrapping, keeps items in one row */
+    gap: 20px; /* Adds space between skill items */
+    overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+}
+
+.skill-item {
+    min-width: 20%; /* Ensures each skill item takes up at least 20% of the container width */
+    background-color: #252525; /* Sets background color for each skill item */
+    padding: 20px; /* Adds padding inside each skill item */
+    border-radius: 10px; /* Rounds the corners of skill items */
+    position: relative; /* Allows positioning within each skill item */
+    text-align: center; /* Centers text within each skill item */
+}
+
+.skill-image-wrapper {
+    overflow: hidden; /* Hides overflow content */
+    border-radius: 10px; /* Rounds the corners of images */
+    margin-bottom: 10px; /* Adds space below the image */
+}
+
+.skill-image-wrapper img {
+    height: 20vh; /* Sets the image width to fill its container */
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of images */
+}
+
+.skill-item h3 {
+    font-size: 18px; /* Sets font size for skill item headings */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+.skill-item p {
+    font-size: 14px; /* Sets font size for skill item paragraphs */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+}
+
+.portfolio-section {
+    padding: 50px 80px; /* Adds padding to top/bottom and sides */
+    background-color: #202020; /* Sets background color to dark grey */
+    color: white; /* Sets text color to white */
+}
+
+.portfolio-content {
+    display: flex; /* Uses Flexbox to align portfolio content */
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: space-between; /* Distributes space between large image and right content */
+    gap: 20px; /* Adds space between large image and right content */
+}
+
+.portfolio-large-image {
+    flex: 2; /* Makes the large image container larger */
+}
+
+.portfolio-large-image img {
+    width: 100%; /* Sets the large image width to fill its container */
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the large image */
+    object-fit: cover; /* Ensures the large image covers its container */
+}
+
+.portfolio-right-content {
+    display: flex; /* Uses Flexbox to stack small image and text vertically */
+    flex-direction: column; /* Stacks content vertically */
+    flex: 1; /* Makes this column smaller than the large image */
+    gap: 20px; /* Adds space between the small image and text */
+}
+
+.portfolio-small-image {
+    flex: 1; /* Allows the small image section to grow and fill space */
+}
+
+.portfolio-small-image img {
+    width: 100%; /* Sets the small image width to fill its container */
+    height: auto; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the small image */
+    object-fit: cover; /* Ensures the small image covers its container */
+}
+
+.portfolio-text {
+    flex: 1; /* Allows the text section to grow and fill space */
+}
+
+.portfolio-text h2 {
+    font-size: 36px; /* Sets font size for the portfolio heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    position: relative; /* Positions the heading for adding underline */
+}
+
+.portfolio-text h2::after {
+    content: ''; /* Creates an empty content for the underline */
+    display: block; /* Makes it a block element */
+    width: 60px; /* Sets the width of the underline */
+    height: 3px; /* Sets the height of the underline */
+    background-color: white; /* Sets underline color to white */
+    margin-top: 10px; /* Adds space above the underline */
+}
+
+.portfolio-text p {
+    font-size: 14px; /* Sets font size for portfolio text */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+}
+
+.thank-you-section {
+    padding: 50px 80px; /* Adds padding to top/bottom and sides */
+    background-color: #202020; /* Sets background color to dark grey */
+    color: white; /* Sets text color to white */
+}
+
+.thank-you-content {
+    display: flex; /* Uses Flexbox to align thank-you content */
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: space-between; /* Distributes space between text and image */
+    gap: 20px; /* Adds space between text and image */
+}
+
+.thank-you-text {
+    flex: 1; /* Allows the text section to grow and fill space */
+    max-width: 50%; /* Limits text width to half the section */
+}
+
+.thank-you-text h2 {
+    font-size: 36px; /* Sets font size for the thank-you heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    position: relative; /* Positions the heading for adding underline */
+}
+
+.thank-you-text h2::after {
+    content: ''; /* Creates an empty content for the underline */
+    display: block; /* Makes it a block element */
+    width: 60px; /* Sets the width of the underline */
+    height: 3px; /* Sets the height of the underline */
+    background-color: white; /* Sets underline color to white */
+    margin-top: 10px; /* Adds space above the underline */
+}
+
+.thank-you-text p {
+    font-size: 14px; /* Sets font size for thank-you paragraphs */
+    line-height: 1.6; /* Sets line height to 1.6 times the font size */
+    margin-bottom: 20px; /* Adds space between paragraphs */
+}
+
+.thank-you-image {
+    flex: 1.5; /* Makes the image container larger than the text container */
+}
+
+.thank-you-image img {
+    height: 50vh; /* Adjusts height to maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the image */
+    object-fit: cover; /* Ensures the image covers its container */
+    padding-left: 100px;
+}
+
+.img-cont {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;  
+}
